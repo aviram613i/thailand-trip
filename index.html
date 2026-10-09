@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thailand Travel Plans: Krabi & Phuket</title>
+    <title>Thailand Travel Plans</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -67,28 +67,294 @@
 
     <header class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <h1 class="text-2xl font-bold text-slate-800 flex items-center gap-2">
-                <span>🌴</span> Thailand Itinerary
+            <h1 class="text-2xl font-bold text-slate-800 flex items-center gap-2 whitespace-nowrap">
+                <span>🌴</span> Thailand Trip
             </h1>
             
-            <div class="flex bg-slate-100 p-1 rounded-xl w-full sm:w-auto">
-                <button id="btn-krabi" onclick="switchLocation('krabi')" class="flex-1 sm:w-32 py-2 px-4 rounded-lg font-medium text-sm transition-all duration-200 bg-teal-600 text-white shadow-sm">
+            <div class="flex flex-wrap sm:flex-nowrap bg-slate-100 p-1 rounded-xl w-full sm:w-auto gap-1">
+                <button id="btn-itinerary" onclick="switchLocation('itinerary')" class="flex-1 sm:flex-none sm:w-36 py-2 px-4 rounded-lg font-medium text-sm transition-all duration-200 bg-indigo-600 text-white shadow-sm">
+                    Suggested Itinerary
+                </button>
+                <button id="btn-krabi" onclick="switchLocation('krabi')" class="flex-1 sm:flex-none sm:w-28 py-2 px-4 rounded-lg font-medium text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-200">
                     Krabi
                 </button>
-                <button id="btn-phuket" onclick="switchLocation('phuket')" class="flex-1 sm:w-32 py-2 px-4 rounded-lg font-medium text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-200">
+                <button id="btn-phuket" onclick="switchLocation('phuket')" class="flex-1 sm:flex-none sm:w-28 py-2 px-4 rounded-lg font-medium text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-200">
                     Phuket
                 </button>
             </div>
         </div>
     </header>
 
-    <main id="app-container" class="max-w-6xl mx-auto px-4 pt-32 sm:pt-28">
+    <main id="app-container" class="max-w-6xl mx-auto px-4 pt-36 sm:pt-28">
         <!-- Content injected via JS -->
     </main>
 
     <script>
         const itineraryData = {
+            itinerary: {
+                id: 'itinerary',
+                title: "Suggested Itinerary",
+                dates: "October 14–24, 2026",
+                hotel: "Dusit Thani Krabi & InterContinental Phuket",
+                priorities: "A balanced, slow romantic trip with 3–4 active outings, beautiful nature experiences, and plenty of unstructured holiday time.",
+                themeColor: "indigo",
+                categories: [
+                    {
+                        name: "📍 Part 1 — Krabi",
+                        icon: "",
+                        activities: [
+                            {
+                                title: "Wednesday, October 14 — Arrival",
+                                image: "",
+                                description: `
+                                    <p><strong>15:55</strong> — Arrive at Krabi Airport (KBV).</p>
+                                    <ul class="list-disc pl-5 mt-3 space-y-2 text-slate-700">
+                                        <li>Transfer to Dusit Thani. Allow around 45–60 minutes, depending on traffic and your transfer arrangements.</li>
+                                        <li>Check in and relax after the flight.</li>
+                                        <li>Walk along Klong Muang Beach and have dinner at the hotel or nearby.</li>
+                                    </ul>
+                                    <p class="mt-4"><strong>Booking:</strong> Pre-arrange the airport transfer. No other reservations are needed.</p>
+                                `
+                            },
+                            {
+                                title: "Thursday, October 15 — Dragon Crest + Tubkaek Beach",
+                                image: "https://images.openai.com/static-rsc-4/jbGVbLu3uTBYIgfSHO_N_bN8pi-dmtP5mZQphb4D52nMR241SuaDfwnJkU2uBz4uU-oUVOFSMA8yOACmrvG_B0sdIeCGiXbW0oJNgmQhzbz_HjF8Bo0G6yXbItVEJgCeCrGsryLgyY3ZTo3crrxA15fxYd_sDbnx1YwCi9g39y8hBdomqChxd5NtFPwNpb76?purpose=inline",
+                                description: `
+                                    <p><strong>07:15</strong> — Leave the hotel. Take a taxi or pre-arranged driver to the Dragon Crest trailhead.</p>
+                                    <p class="mt-3"><strong>08:00–12:30</strong> — Dragon Crest hike. Allow about 4–5 hours for the round trip, including breaks and photos. This is a substantial uphill hike, so wear proper trail shoes and carry water.</p>
+                                    <p class="mt-3"><strong>13:00–16:00</strong> — Tubkaek / Tab Kak Beach</p>
+                                    <p class="mt-3"><strong>17:00</strong> — Couples massage. Couples massage at Devarana Wellness, if you're happy with a fairly full day. Otherwise, move the massage to a free afternoon or keep it for Phuket.</p>
+                                    <ul class="list-disc pl-5 mt-2 space-y-2 text-slate-700">
+                                        <li><strong>Option 1:</strong> Devarana Wellness at Dusit Thani — my preferred choice. A premium spa on the hotel property, with Thai massage, coconut-oil massage and couples treatments. Its published Couples Retreat is available in 60- and 90-minute formats. <a href="https://www.dusit.com/dusitthanikrabibeachresort/devarana/" class="data-link" target="_blank">Official spa menu</a>.</li>
+                                        <li><strong>Option 2:</strong> Number One Massage, Klong Muang. A more casual local massage shop listed on Klong Muang Road, shop B3. <a href="https://www.tripadvisor.com/Attraction_Review-g11640615-d15688902-Reviews-Number_One_Massage-Khlong_Muang_Krabi_Province.html" class="data-link" target="_blank">Current listing</a>.</li>
+                                    </ul>
+                                    <p class="mt-3">Enjoy a late lunch, a stroll along the quieter beach and a drink before returning to the hotel.</p>
+                                    <p class="mt-3"><strong>Why combine these?</strong> The trailhead is close to Tubkaek, so this pairing gives you an active morning and a relaxed coastal afternoon without unnecessary driving.</p>
+                                    <p class="mt-3"><strong>Weather:</strong> High sensitivity for the hike. Avoid the trail after heavy rain or when visibility is poor.</p>
+                                    <p class="mt-3"><strong>Booking:</strong> Arrange a taxi a day ahead; a guide is not normally required for the standard trail. If the trail is too wet, move the hike to another suitable morning. Reserve Devarana in advance if you want a couples appointment.</p>
+                                `
+                            },
+                            {
+                                title: "Friday, October 16 — Hong Islands",
+                                image: "https://images.openai.com/static-rsc-4/Pnx3XXz1E8Zmb1rmFjR_eW37yG90N-CUOGzxHPXaJtX5icLSznjRcjwWaHz1ogWZbmcg9xZTkrFTrpoOadfEeA8-y2mix35Sv4JVHcziNSi44D5-L_NB_zNZpSb4mTwRuCVrlXSaWA7Nu_FU6-L7b6K0-mACTv2xmOHYv3uPOfoMYchH17N1x-y7Ii4SwH3p?purpose=inline",
+                                description: `
+                                    <p><strong>07:30–17:00</strong> — Full-day island excursion.</p>
+                                    <p class="mt-3">Book a tour with hotel pickup. Expect boat travel, beach time, limestone scenery, and swimming or snorkeling if conditions permit. Lunch is often included.</p>
+                                    <ul class="list-disc pl-5 mt-3 space-y-2 text-slate-700">
+                                        <li><strong>Transport:</strong> Tour pickup from Dusit, followed by a speedboat or longtail.</li>
+                                        <li><strong>Weather:</strong> Very high sensitivity. Safety depends on wind and sea conditions as well as rain.</li>
+                                        <li><strong>Booking:</strong> Reserve a tour with clear weather-cancellation or rescheduling terms.</li>
+                                        <li><strong>Combination:</strong> Keep this as the only major activity of the day.</li>
+                                    </ul>
+                                    <p class="mt-3">This is one of the classic Krabi experiences, so I'd prioritize it over adding another island tour later.</p>
+                                `
+                            },
+                            {
+                                title: "Saturday, October 17 — Railay + Phra Nang Beach + viewpoint",
+                                image: "https://images.openai.com/static-rsc-4/E3pp_YbPRI4RicfJV2e29PubwK2bqBsTY2ehitOWyAkL2SECpXgDlfixgn4RVTbur8ZG5nf90bBajL13n3lWz710iI0jcJ_bRD6tdIMtlqTABl1zL4J_uYE6vfxvRRFj2LQtjQ_J4JRxnLwSjyu96io6GjBG2st6B1v0xljGkdM5qW_lZmYQFIQN84JwpVrT?purpose=inline",
+                                description: `
+                                    <p><strong>08:30</strong> — Taxi to Ao Nang. Allow around 15–25 minutes, depending on traffic.</p>
+                                    <p class="mt-3"><strong>09:00</strong> — Longtail boat to Railay. The crossing takes around 10–15 minutes once underway.</p>
+                                    <p class="mt-3"><strong>Morning</strong> — Railay and Phra Nang. Wander between the beaches, enjoy the views and have lunch.</p>
+                                    <p class="mt-3"><strong>Early afternoon</strong> — Railay Viewpoint. Add this short but steep hike if conditions are dry. Skip the lagoon scramble if the rocks and trail are slippery.</p>
+                                    <p class="mt-3"><strong>15:00–16:30</strong> — Return. Head back through Ao Nang, with an optional early dinner before returning to your hotel.</p>
+                                    <ul class="list-disc pl-5 mt-3 space-y-2 text-slate-700">
+                                        <li><strong>Weather:</strong> High sensitivity because of the boat crossing and exposed trail sections.</li>
+                                        <li><strong>Booking:</strong> Shared longtails can generally be arranged at Ao Nang. Reserve a taxi the previous day if you prefer a scheduled pickup.</li>
+                                        <li><strong>Combination:</strong> Railay, Phra Nang and the viewpoint naturally belong in the same outing.</li>
+                                    </ul>
+                                    <p class="mt-3 text-sm italic">Swap the order of this and the Hong Islands excursion if the marine forecast favours the other date.</p>
+                                `
+                            },
+                            {
+                                title: "Sunday, October 18 — Yoga, Beach and Kayaking",
+                                image: "",
+                                description: `
+                                    <p>This is a deliberately lighter day before you transfer to Phuket.</p>
+                                    <p class="mt-4 font-semibold text-lg">08:00 — Yoga class</p>
+                                    <ul class="list-disc pl-5 mt-2 space-y-2 text-slate-700">
+                                        <li><strong>Preferred option:</strong> yoga at Dusit Thani. The resort's published class is 50 minutes on Cocobida Lawn. Walk-ins are not accepted. <a href="https://www.mydusitkrabi.com/service-page/yoga" class="data-link" target="_blank">Official yoga page</a>.</li>
+                                        <li><strong>Alternative:</strong> Samadee Yoga Studio, Ao Nang. Offers studio classes in nature, usually 07:30–09:00 at Aonang Fiore Resort. <a href="https://samadeeyoga.com/" class="data-link" target="_blank">Official Samadee schedule</a>. (Skip the Dusit class if choosing this).</li>
+                                    </ul>
+                                    <p class="mt-4 font-semibold text-lg">09:30–12:30 — Breakfast, beach and pool time</p>
+                                    <p class="mt-1">Return to the resort, have a leisurely breakfast or lunch, and leave the morning open. You don't need to schedule another major excursion on this day.</p>
+                                    <p class="mt-4 font-semibold text-lg">13:45–18:00: Afternoon Ao Thalane kayaking tour</p>
+                                    <p class="mt-1">Including hotel pickup and the paddle through mangroves and limestone channels. Confirm the exact pickup and return time with the operator.</p>
+                                `
+                            },
+                            {
+                                title: "Monday, October 19 — Krabi to Phuket",
+                                image: "https://images.openai.com/static-rsc-4/-IHZoRRmUEziCsNc2hWAzyeoAVc3grKqYjaerjnY4BbS73AlAOhADk1SOMqT1eZ4SiIGQHIieafZ7HifQFh0Ubhv0axXuJLica3ooLAcs6TVkirqCnlCb2d_1-i1qrCN0sDRP4zRRXsmZdeW74SkUT-HSc8FAXqtpQ-hzTZMy6Icnf_NlvxLtg6fRKj9jAg6?purpose=inline",
+                                description: `
+                                    <p>Enjoy breakfast, a short beach walk and perhaps a quick swim. Check out and leave for Phuket according to your chosen transport. Your transfer remains TBD:</p>
+                                    
+                                    <p class="mt-4 font-semibold">Option A — Private car with a scenic stop (Recommended)</p>
+                                    <p class="mt-1">Depart Dusit after breakfast, drive toward Phuket, stop at Samet Nangshe Viewpoint if visibility is good, have lunch, and continue to the InterContinental in Kamala.</p>
+                                    <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-700">
+                                        <li><strong>Direct drive:</strong> Around 2.5–3 hours in normal traffic.</li>
+                                        <li><strong>With sightseeing:</strong> Allow approximately 5–6 hours door to door.</li>
+                                        <li><strong>Weather:</strong> Low–moderate for the road journey, but the viewpoint depends on visibility. Skip the detour if visibility is poor.</li>
+                                        <li><strong>Booking:</strong> Reserve a driver who agrees to wait while you visit the viewpoint and stop for lunch.</li>
+                                    </ul>
+
+                                    <p class="mt-4 font-semibold">Option B — Ferry or speedboat</p>
+                                    <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-700">
+                                        <li>Transfer from Klong Muang to the departure pier around Ao Nang/Nopparat Thara, take the boat to Phuket, then a taxi to Kamala.</li>
+                                        <li><strong>Time:</strong> Allow around 4–5 hours door to door.</li>
+                                        <li><strong>Weather:</strong> High sensitivity, particularly for speedboats.</li>
+                                        <li><strong>Booking:</strong> Verify the exact October 19 schedule before relying on this option. <a href="https://www.phuketferry.com/route-ao-nang-phuket.html" class="data-link" target="_blank">Route and timetable information</a>.</li>
+                                    </ul>
+                                    <p class="mt-4 italic">After checking in, enjoy a quiet evening at the resort. Avoid adding another excursion after the transfer.</p>
+                                `
+                            }
+                        ]
+                    },
+                    {
+                        name: "📍 Part 2 — Phuket",
+                        icon: "",
+                        activities: [
+                            {
+                                title: "Tuesday, October 20 — Phang Nga Bay and James Bond Island",
+                                image: "https://images.openai.com/static-rsc-4/VaVAVv_rcEbpG58ixRehbV0GYgRLOUs03witucOZvCMNV0OaJDsEEEplcxEyboPoVh4GlwBbgj_8sE9y_LzE9yj4yKDSrKf8l2FqvjLZsEb8v9MAHmRBtdu9smbCBDCanGgrI6yfUC9aoRh1TPP6dWJBg3Wy2yyuDinIw2kpoww?purpose=inline",
+                                description: `
+                                    <p><strong>07:00–17:00/18:00</strong> — Full-day boat excursion</p>
+                                    <p class="mt-2">Explore dramatic limestone cliffs, islands, caves and sheltered lagoons. Depending on the itinerary, the tour may include James Bond Island, Koh Panyee and sea-canoeing.</p>
+                                    <ul class="list-disc pl-5 mt-3 space-y-2 text-slate-700">
+                                        <li><strong>Transport:</strong> Tour pickup at the hotel, then boat from the departure pier.</li>
+                                        <li><strong>Weather:</strong> High sensitivity. Conditions in the bay and at the departure pier determine whether the trip proceeds.</li>
+                                        <li><strong>Booking:</strong> Reserve now with a clear cancellation/rescheduling policy.</li>
+                                        <li><strong>Combination:</strong> Keep the entire day for this excursion.</li>
+                                    </ul>
+                                    <p class="mt-3">This is my preferred Phuket boat trip because the limestone landscapes and lagoons provide a different experience from the islands around Krabi.</p>
+                                    <p class="mt-2 italic">If the forecast is poor, swap this day with October 21 or 23 rather than trying to squeeze the boat trip into a marginal window.</p>
+                                `
+                            },
+                            {
+                                title: "Wednesday, October 21 — Phuket Old Town + Muay Thai",
+                                image: "https://images.openai.com/static-rsc-4/9266xJAh4K03QZAe6QzgP8sUjDQLIo_k7vNsBi99M2Jvn6fGinf5eUmzqrKz32hqJ647mftQh4L866ZscnV3SVFkSCplG_b6NTouxaRKXGG4874laONy8q78CYUaFLVXNkTiI4Ab66N7UN1M2eMaqYhUPMd16zBmjAk1g2LHYTA?purpose=inline",
+                                description: `
+                                    <p class="font-semibold text-lg">09:30–13:30 — Phuket Old Town</p>
+                                    <p class="mt-1">Take a taxi or private driver to explore the colorful Sino-Portuguese shophouses, shrines, small shops and cafés. Have lunch before heading back toward Kamala.</p>
+                                    
+                                    <p class="mt-4 font-semibold text-lg">16:00–17:30 — Beginner Muay Thai class</p>
+                                    <ul class="list-disc pl-5 mt-2 space-y-3 text-slate-700">
+                                        <li><strong>Option 1: Kamala Muay Thai</strong> — easiest location. A dedicated local gym offering group/private training. Message them in advance to arrange a beginner class around 16:30. <a href="https://www.kamalamuaythai.com/" class="data-link" target="_blank">Official website and booking</a>.</li>
+                                        <li><strong>Option 2: Bangtao Muay Thai & MMA</strong> — published schedule. Their Wednesday schedule includes regular Muay Thai at 16:00. Roughly 20–35 minutes from Kamala. <a href="https://bangtaomuaythai.com/schedule/" class="data-link" target="_blank">Official timetable</a>.</li>
+                                    </ul>
+                                    <p class="mt-4"><strong>Transport:</strong> For Kamala, return toward the resort and take a short taxi. For Bangtao, head directly from Old Town toward Bangtao after lunch, allowing a generous traffic buffer.</p>
+                                    <p class="mt-2"><strong>Booking:</strong> Contact Kamala Muay Thai now to agree on a suitable beginner session. Bangtao has a published timetable, but confirm availability before travelling.</p>
+                                `
+                            },
+                            {
+                                title: "Thursday, October 22 — Khao Phra Thaeo rainforest + couples massage",
+                                image: "https://images.openai.com/static-rsc-4/Zo_90ELcFidyduCR1-rCT7ujVP_9zudOlt6Xcd-YJC80iIPZpVUbiQKslWBR2OZXWOd7lPCPEHCXg9MSKRfkCl4TVL2uiOdTT9WkPfWtQG8BEnwxCxWOEAmg6KX7j5IgHj0p1rFoYiAfPDFblsjcNGKM2ykzHcUH01aqK__Q8Ws?purpose=inline",
+                                description: `
+                                    <p><strong>08:30</strong> — Leave Kamala. Take a taxi or private driver to Khao Phra Thaeo National Park.</p>
+                                    <p class="mt-2"><strong>09:30–12:30</strong> — Bang Pae Waterfall and rainforest. Enjoy a relatively short forest walk and the waterfall. Keep any longer trail optional, and avoid steep or slippery sections after heavy rain.</p>
+                                    <p class="mt-2"><strong>13:00–14:30</strong> — Lunch and return to Kamala. Leave enough time to get back, shower and rest before your spa appointment.</p>
+                                    
+                                    <p class="mt-4 font-semibold text-lg">16:30 — Couples massage</p>
+                                    <ul class="list-disc pl-5 mt-2 space-y-2 text-slate-700">
+                                        <li><strong>Option 1:</strong> Sati Spa at the InterContinental — most convenient. Ideal for a couples treatment following a nature outing. <a href="https://phuket.intercontinental.com/sati-spa" class="data-link" target="_blank">Official spa menu and bookings</a>.</li>
+                                        <li><strong>Option 2:</strong> CHANN Wellness Spa, Kamala — an alternative outside the resort. <a href="https://channspaphuket.com/" class="data-link" target="_blank">Official treatments and contact</a>.</li>
+                                    </ul>
+                                    <p class="mt-4 italic"><strong>Weather plan:</strong> If heavy rain makes the forest unsafe, skip the waterfall rather than walking on slippery trails. Have a leisurely lunch, enjoy the resort facilities, and keep the massage appointment.</p>
+                                `
+                            },
+                            {
+                                title: "Friday, October 23 — Southern Phuket scenic loop",
+                                image: "https://images.openai.com/static-rsc-4/I1RHRZqX5IyPlzMuQmREGaz99fxSu8lura4tO9HSzqpUrUBgVIAAyMFri0b-cTKvJX3S48TW7-zEv-9in9SXthy92G3EegM1nqWNE5vChNRJPflK1g3nySMfmM0lQaoBhOKC7RsICcPivCTQMkV0aJZCi__P-iLDOwCxlwC-cQjk5FMLIDbYYjQ3ExEnxYWM?purpose=inline",
+                                description: `
+                                    <ul class="space-y-3 text-slate-700">
+                                        <li><strong>10:00</strong> — Depart Kamala by taxi or private driver.</li>
+                                        <li><strong>11:00</strong> — Wat Chalong: Visit Phuket's best-known Buddhist temple. Cover shoulders and knees.</li>
+                                        <li><strong>12:30</strong> — Lunch: Enjoy a relaxed Thai lunch on the way south.</li>
+                                        <li><strong>14:00</strong> — Karon Viewpoint: A short stop for panoramic views over the southern bays.</li>
+                                        <li><strong>Late afternoon</strong> — Promthep Cape: Stay for sunset if the skies are promising, then have dinner before returning to Kamala.</li>
+                                    </ul>
+                                    <p class="mt-4"><strong>Time:</strong> Approximately 7–9 hours, depending on stops and traffic.</p>
+                                    <p class="mt-2"><strong>Weather:</strong> Moderate sensitivity; temples are more flexible than viewpoints.</p>
+                                    <p class="mt-2"><strong>Booking:</strong> Arrange a driver a day or two in advance if you want several stops.</p>
+                                    <p class="mt-2"><strong>Optional:</strong> Include Big Buddha only if your resort concierge confirms current access and opening hours.</p>
+                                    <p class="mt-4 italic">This combines the main southern sights in one outing and avoids making several separate long taxi journeys.</p>
+                                `
+                            },
+                            {
+                                title: "Saturday, October 24 — Final resort morning + flight",
+                                image: "",
+                                description: `
+                                    <p><strong>16:55</strong> — Flight from Phuket Airport (HKT).</p>
+                                    <ul class="list-disc pl-5 mt-3 space-y-2 text-slate-700">
+                                        <li>Have breakfast and take a final swim or beach walk.</li>
+                                        <li>Check out by noon and leave luggage with the hotel.</li>
+                                        <li>Enjoy an early lunch at the resort.</li>
+                                        <li><strong>13:00–13:15</strong> — Leave for the airport, allowing extra time for traffic.</li>
+                                    </ul>
+                                    <p class="mt-4">The airport transfer is often around 45 minutes, but a generous buffer is better than trying to squeeze in one last activity.</p>
+                                    <p class="mt-2 font-semibold text-rose-600">Do not plan a boat trip or distant sightseeing on departure day.</p>
+                                `
+                            }
+                        ]
+                    },
+                    {
+                        name: "📋 Booking Checklist & Alternates",
+                        icon: "",
+                        activities: [
+                            {
+                                title: "Booking Checklist",
+                                image: "",
+                                description: `
+                                    <div class="overflow-x-auto mt-2">
+                                        <table class="min-w-full bg-white border border-slate-200 text-sm text-left">
+                                            <thead class="bg-slate-50 border-b border-slate-200">
+                                                <tr>
+                                                    <th class="py-3 px-4 font-semibold text-slate-800">Activity</th>
+                                                    <th class="py-3 px-4 font-semibold text-slate-800">When I'd book</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="divide-y divide-slate-100">
+                                                <tr><td class="py-3 px-4">Krabi Airport → Dusit transfer</td><td class="py-3 px-4">Now</td></tr>
+                                                <tr><td class="py-3 px-4">Dragon Crest transport</td><td class="py-3 px-4">1 day ahead; confirm trail conditions</td></tr>
+                                                <tr><td class="py-3 px-4">Hong Islands tour</td><td class="py-3 px-4">Now, with weather flexibility</td></tr>
+                                                <tr><td class="py-3 px-4">Railay transport</td><td class="py-3 px-4">Taxi the day before; shared longtail at Ao Nang</td></tr>
+                                                <tr><td class="py-3 px-4">Krabi yoga</td><td class="py-3 px-4">Book Dusit or Samadee now</td></tr>
+                                                <tr><td class="py-3 px-4">Krabi couples massage</td><td class="py-3 px-4">Reserve Devarana now, or check local availability</td></tr>
+                                                <tr><td class="py-3 px-4">Krabi → Phuket transfer</td><td class="py-3 px-4">Now, once you choose private car or confirm ferry</td></tr>
+                                                <tr><td class="py-3 px-4">Phang Nga Bay tour</td><td class="py-3 px-4">Now, with cancellation/rescheduling flexibility</td></tr>
+                                                <tr><td class="py-3 px-4">Phuket Muay Thai</td><td class="py-3 px-4">Contact Kamala Muay Thai now, or confirm Bangtao</td></tr>
+                                                <tr><td class="py-3 px-4">Bang Pae transport</td><td class="py-3 px-4">1–2 days ahead; check rain and trail conditions</td></tr>
+                                                <tr><td class="py-3 px-4">Phuket couples massage</td><td class="py-3 px-4">Reserve Sati Spa or CHANN in advance</td></tr>
+                                                <tr><td class="py-3 px-4">Southern Phuket driver</td><td class="py-3 px-4">1–2 days ahead if visiting multiple stops</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p class="mt-4 italic text-sm text-slate-600">For the boat trips, let the marine forecast guide your final choice of day. Safety and visibility should take priority over the calendar.</p>
+                                `
+                            },
+                            {
+                                title: "Alternative Workouts",
+                                image: "",
+                                description: `
+                                    <p class="font-semibold text-lg text-slate-800 border-b pb-2 mb-3">Krabi Muay Thai Options</p>
+                                    <ul class="list-disc pl-5 mb-6 space-y-2 text-slate-700">
+                                        <li><strong>E.N. Muaythai Gym, Ao Nang:</strong> A welcoming gym for first-timers. Group sessions run Mon–Sat, 08:00–10:00 and 16:00–18:00. <a href="https://enmuaythaigym.com/prices-schedule/" class="data-link" target="_blank">Official timetable</a>.</li>
+                                        <li><strong>Over The Top Muay Thai, Ao Nang:</strong> Offers beginner-friendly group sessions and private coaching. Classes at 08:00, 09:00, 14:00 and 15:00 Mon–Sat. <a href="https://overthetopkrabi.com/classes" class="data-link" target="_blank">Official timetable</a>.</li>
+                                    </ul>
+                                    <p class="text-sm italic text-slate-600 mb-6">I'd keep Muay Thai in Phuket as the main plan unless one of these Krabi options fits your timing substantially better.</p>
+
+                                    <p class="font-semibold text-lg text-slate-800 border-b pb-2 mb-3">Phuket Yoga Options</p>
+                                    <ul class="list-disc pl-5 space-y-2 text-slate-700">
+                                        <li><strong>Yoga Republic, Cherngtalay:</strong> A dedicated studio offering different yoga styles. Allow around 20–30 minutes by taxi from Kamala. <a href="https://yogarepublic.co/" class="data-link" target="_blank">Official schedule</a>.</li>
+                                        <li><strong>CHANN Wellness Spa, Kamala:</strong> Offers wellness sessions including "Yoga for All" and sunset beach yoga. <a href="https://channspaphuket.com/wellness-activities/" class="data-link" target="_blank">Official wellness activities</a>.</li>
+                                    </ul>
+                                `
+                            }
+                        ]
+                    }
+                ]
+            },
             krabi: {
+                // (Original Krabi Data exactly as it was)
                 id: 'krabi',
                 title: "Krabi Stay",
                 dates: "October 14–19, 2026",
@@ -103,7 +369,7 @@
                             {
                                 title: "Dragon Crest / Khao Ngon Nak",
                                 image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/e5/e7/54.jpg",
-                                description: "A challenging half-day hike with panoramic views over Krabi's limestone coastline.",
+                                description: "<p>A challenging half-day hike with panoramic views over Krabi's limestone coastline.</p>",
                                 time: "4–5 hours.",
                                 transport: "Taxi or private car, approximately 15–20 minutes.",
                                 weather: "🔴 High sensitivity; avoid slippery conditions after heavy rain or poor visibility.",
@@ -113,7 +379,7 @@
                             {
                                 title: "Din Daeng Doi",
                                 image: "https://lh3.googleusercontent.com/grass-cs/AABkmLddWqfi6iuBGUiW6rPbg-n-_STLBp5kCXi_dEuz5qy16Sfl8XqbLWInocnWlufNE0RolQMCXHGy1xi3j2Ho054ONFysMaFQ3UhQgtiNw7MtaCacbFO2D3J5o2casHI6jtP6RdRRVg=w270-h312-n-k-no",
-                                description: "A short, steep walk to a beautiful viewpoint, especially appealing early in the morning.",
+                                description: "<p>A short, steep walk to a beautiful viewpoint, especially appealing early in the morning.</p>",
                                 time: "1–2 hours.",
                                 transport: "Taxi, approximately 15–25 minutes.",
                                 weather: "🟡 Moderate; clouds can obscure the view.",
@@ -123,7 +389,7 @@
                             {
                                 title: "Railay Viewpoint",
                                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj3P9OJB0wpgVgyTsylLCIOWcWZqsjWsqd8_tktFIVMsmu2412fUhCmoz-&s=10",
-                                description: "A steep, rugged climb above Railay with rewarding views. Avoid the lagoon scramble if the trail is wet.",
+                                description: "<p>A steep, rugged climb above Railay with rewarding views. Avoid the lagoon scramble if the trail is wet.</p>",
                                 time: "1–1.5 hours hiking, within a 5–7-hour Railay outing.",
                                 transport: "Taxi to Ao Nang, then a longtail boat.",
                                 weather: "🔴 High sensitivity.",
@@ -133,7 +399,7 @@
                             {
                                 title: "Huay To Waterfall / Khao Phanom Bencha",
                                 image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/bb/a7/6c/photo3jpg.jpg?w=900&h=500&s=1",
-                                description: "A rainforest walk past waterfalls and natural pools, offering a different landscape from the coastal hikes.",
+                                description: "<p>A rainforest walk past waterfalls and natural pools, offering a different landscape from the coastal hikes.</p>",
                                 time: "2–4 hours at the park.",
                                 transport: "Private car or taxi, roughly 1 hour or more each way.",
                                 weather: "🟡 Moderate; heavy rain can make trails slippery and water flows stronger.",
@@ -143,7 +409,7 @@
                             {
                                 title: "Tiger Cave Temple",
                                 image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/b0/6c/a1/by-sergi-tkachuk-taken.jpg?w=1200&h=1200&s=1",
-                                description: "A strenuous climb of approximately 1,200-plus steps to a hilltop viewpoint and temple. Optional if you enjoy challenging climbs.",
+                                description: "<p>A strenuous climb of approximately 1,200-plus steps to a hilltop viewpoint and temple. Optional if you enjoy challenging climbs.</p>",
                                 time: "2–3 hours for the temple and climb.",
                                 transport: "Taxi or private car, approximately 30–45 minutes from the Ao Nang area.",
                                 weather: "🟡–🔴; heat and wet steps can make the climb difficult.",
@@ -159,7 +425,7 @@
                             {
                                 title: "Hong Islands",
                                 image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/ea/20/a9/caption.jpg?w=1100&h=1100&s=1",
-                                description: "A full-day trip featuring turquoise water, limestone formations, beaches and possible snorkeling stops.",
+                                description: "<p>A full-day trip featuring turquoise water, limestone formations, beaches and possible snorkeling stops.</p>",
                                 time: "7–9 hours.",
                                 transport: "Tour pickup from your hotel, followed by speedboat or longtail.",
                                 weather: "🔴 Very high sensitivity.",
@@ -169,7 +435,7 @@
                             {
                                 title: "Railay + Phra Nang Beach",
                                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbaOE28AFXlFfD7dm2F8S-9NPFsD6CI0Qf6dVP67bMnc5z97P7FfSRsC1&s=10",
-                                description: "A beautiful beach outing with limestone cliffs, swimming when conditions are safe, and time to wander around the peninsula.",
+                                description: "<p>A beautiful beach outing with limestone cliffs, swimming when conditions are safe, and time to wander around the peninsula.</p>",
                                 time: "5–7 hours.",
                                 transport: "Taxi to Ao Nang, then a longtail boat; walk between the beaches.",
                                 weather: "🔴 High sensitivity because of the sea crossing.",
@@ -179,7 +445,7 @@
                             {
                                 title: "Klong Muang Beach",
                                 image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/68/8c/dc/photo5jpg.jpg?w=1200&h=-1&s=1",
-                                description: "Your easy beach option right by the hotel, perfect for swimming when safe, walking and sunset.",
+                                description: "<p>Your easy beach option right by the hotel, perfect for swimming when safe, walking and sunset.</p>",
                                 time: "1–4 hours or longer.",
                                 transport: "Walk.",
                                 weather: "🟢–🟡.",
@@ -189,7 +455,7 @@
                             {
                                 title: "Tubkaek / Tab Kak Beach",
                                 image: "https://content.phuket101.net/wp-content/uploads/20250917214408/Tubkaek-Beach-Krabi-2.jpg",
-                                description: "A quieter coastal area near your hotel, great for a peaceful beach afternoon, a drink or lunch, and sunset.",
+                                description: "<p>A quieter coastal area near your hotel, great for a peaceful beach afternoon, a drink or lunch, and sunset.</p>",
                                 time: "2–5 hours.",
                                 transport: "Taxi, approximately 10–15 minutes.",
                                 weather: "🟢–🟡.",
@@ -205,7 +471,7 @@
                             {
                                 title: "Ao Thalane kayaking",
                                 image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/ae/5a/0d.jpg",
-                                description: "Kayak through mangroves, narrow channels and limestone scenery. A good nature experience when you don't want another exposed island trip.",
+                                description: "<p>Kayak through mangroves, narrow channels and limestone scenery. A good nature experience when you don't want another exposed island trip.</p>",
                                 time: "4–5 hours for a half-day outing.",
                                 transport: "Tour pickup or taxi, roughly 30–45 minutes.",
                                 weather: "🟡 Low–medium sensitivity; storms can still cause cancellations.",
@@ -215,7 +481,7 @@
                             {
                                 title: "Emerald Pool",
                                 image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/6c/46/9c.jpg",
-                                description: "A jungle walk to a famous clear natural pool, surrounded by lush rainforest.",
+                                description: "<p>A jungle walk to a famous clear natural pool, surrounded by lush rainforest.</p>",
                                 time: "2–4 hours at the attraction.",
                                 transport: "Private car or tour, approximately 1 hour 20 minutes each way from the hotel.",
                                 weather: "🟡 Moderate; heavy rain can make paths slippery.",
@@ -225,7 +491,7 @@
                             {
                                 title: "Klong Thom Hot Springs",
                                 image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/97/95/72/caption.jpg?w=1100&h=1100&s=1",
-                                description: "Natural warm pools set in a forest environment, more about soaking and relaxing than sightseeing.",
+                                description: "<p>Natural warm pools set in a forest environment, more about soaking and relaxing than sightseeing.</p>",
                                 time: "1–2 hours.",
                                 transport: "Same private car or tour as Emerald Pool.",
                                 weather: "🟢–🟡.",
@@ -241,7 +507,7 @@
                             {
                                 title: "Dusit resort day: beach, pools, kayaking and paddleboarding",
                                 image: "https://www.dusit.com/dusitthani-krabibeachresort/wp-content/uploads/sites/34/2024/03/5.jpg",
-                                description: "Spend the day enjoying the pools, the beach, lunch and whatever activities appeal to you.",
+                                description: "<p>Spend the day enjoying the pools, the beach, lunch and whatever activities appeal to you.</p>",
                                 time: "Half day to full day.",
                                 transport: "Walk.",
                                 weather: "🟢–🟡; adapt around showers.",
@@ -251,7 +517,7 @@
                             {
                                 title: "Devarana Spa / couples treatment",
                                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUyv-zO9rbyvJsM6essso1iTT_7oiz4fOM2AfP4mbj7UpOuTa9MrqbgPWA&s=10",
-                                description: "A couples massage or wellness treatment, perfect for a rainy afternoon or after hiking.",
+                                description: "<p>A couples massage or wellness treatment, perfect for a rainy afternoon or after hiking.</p>",
                                 time: "1–2.5 hours.",
                                 transport: "Walk within the resort.",
                                 weather: "🟢.",
@@ -267,7 +533,7 @@
                             {
                                 title: "Thai cooking class",
                                 image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/13/f9/22/9c.jpg",
-                                description: "A hands-on introduction to Thai cuisine, often including curry paste, stir-fries and a meal at the end.",
+                                description: "<p>A hands-on introduction to Thai cuisine, often including curry paste, stir-fries and a meal at the end.</p>",
                                 time: "3.5–4 hours.",
                                 transport: "Hotel pickup, or taxi to the class location.",
                                 weather: "🟢 Very low sensitivity.",
@@ -277,7 +543,7 @@
                             {
                                 title: "Ao Nang",
                                 image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/f5/aa/48/come-join-the-fun-at.jpg",
-                                description: "Krabi's busier tourist area with restaurants, shops, bars and a more lively atmosphere than Klong Muang.",
+                                description: "<p>Krabi's busier tourist area with restaurants, shops, bars and a more lively atmosphere than Klong Muang.</p>",
                                 time: "2–4 hours.",
                                 transport: "Taxi, approximately 15–25 minutes depending on traffic.",
                                 weather: "🟢–🟡.",
@@ -287,7 +553,7 @@
                             {
                                 title: "Klong Muang sunset + nearby dinner",
                                 image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/56712968.jpg?k=ab40711e8c19246a4a66160ce4c8e2a21b5b8b881252a21f9e0d063a4ffa61c7&o=",
-                                description: "A simple evening: walk on the beach, watch the sunset and have dinner close to the hotel.",
+                                description: "<p>A simple evening: walk on the beach, watch the sunset and have dinner close to the hotel.</p>",
                                 time: "2–3 hours.",
                                 transport: "Walk or a short taxi ride.",
                                 weather: "🟢–🟡.",
@@ -299,6 +565,7 @@
                 ]
             },
             phuket: {
+                // (Original Phuket Data exactly as it was)
                 id: 'phuket',
                 title: "Phuket Stay",
                 dates: "October 19–24, 2026",
@@ -313,7 +580,7 @@
                             {
                                 title: "Option A: Private car with scenic stops",
                                 image: "https://theworldtravelguy.com/wp-content/uploads/2023/11/DSCF1394-4.jpg",
-                                description: "Travel directly between your hotels, with optional sightseeing stops along the way.",
+                                description: "<p>Travel directly between your hotels, with optional sightseeing stops along the way.</p>",
                                 time: "Around 3 hours directly, or 5–6 hours with a scenic stop and lunch.",
                                 transport: "Pre-book a private driver for hotel-to-hotel pickup.",
                                 weather: "🟢–🟡. Heavy rain affects driving conditions; viewpoints depend on visibility.",
@@ -323,7 +590,7 @@
                             {
                                 title: "Option B: Ferry or speedboat",
                                 image: "https://img.cnt.traveloka.com/tvlk/blog/2024/05/Hp8P6TS0-image.png?tr=q-70,c-at_max,w-1000,h-600",
-                                description: "Cross the Andaman Sea from the Krabi area to Phuket, then transfer to Kamala.",
+                                description: "<p>Cross the Andaman Sea from the Krabi area to Phuket, then transfer to Kamala.</p>",
                                 time: "Approximately 4–5 hours door to door, depending on pier transfers and connections.",
                                 transport: "Arrange transportation from Klong Muang to your departure pier, then a boat to Phuket and a taxi to your hotel.",
                                 weather: "🔴 High, particularly for speedboats.",
@@ -333,7 +600,7 @@
                             {
                                 title: "Option C: Shared minivan or bus",
                                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BG3hijy07pbA25FKLGspy2EtMwLl2sC9m68bglwRMEw-ldahXmyNolVO&s=10",
-                                description: "The budget-friendly road transfer, normally involving one or more pickup/drop-off arrangements.",
+                                description: "<p>The budget-friendly road transfer, normally involving one or more pickup/drop-off arrangements.</p>",
                                 time: "Around 5–7 hours door to door.",
                                 transport: "Book transport from your Krabi hotel to Phuket, then a local transfer to Kamala.",
                                 weather: "🟢–🟡.",
@@ -349,7 +616,7 @@
                             {
                                 title: "Kamala Beach and resort day",
                                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAFZJh1qqp6QQG1eWLp5e4MLJelhmG3WQtu9FhzAFFcx-AN6KHaXSljhQ&s=10",
-                                description: "Enjoy the beach, resort pools, lunch, reading, swimming when conditions are safe, or a spa treatment.",
+                                description: "<p>Enjoy the beach, resort pools, lunch, reading, swimming when conditions are safe, or a spa treatment.</p>",
                                 time: "2 hours to a full day.",
                                 transport: "Walk.",
                                 weather: "🟢–🟡.",
@@ -359,7 +626,7 @@
                             {
                                 title: "Surin Beach",
                                 image: "https://cdn.sanity.io/images/nxpteyfv/goguides/81a268e8dffd0c7ad67f4ed45c599e446947a5d4-1600x1066.jpg",
-                                description: "A beautiful beach north of Kamala, ideal for a coastal walk, photos and a drink or lunch.",
+                                description: "<p>A beautiful beach north of Kamala, ideal for a coastal walk, photos and a drink or lunch.</p>",
                                 time: "1.5–3 hours.",
                                 transport: "Taxi, approximately 10–15 minutes.",
                                 weather: "🟡.",
@@ -369,7 +636,7 @@
                             {
                                 title: "Bang Tao Beach and Laguna area",
                                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-N_9YLvWo3SOLBvpOBCsylWHii1-sIEmSE9OOg3ta1lY6CleK4859iBI&s=10",
-                                description: "A long sandy coastline with cafés, restaurants and resort areas, ideal for a lazy afternoon.",
+                                description: "<p>A long sandy coastline with cafés, restaurants and resort areas, ideal for a lazy afternoon.</p>",
                                 time: "2–4 hours.",
                                 transport: "Taxi, approximately 20–30 minutes.",
                                 weather: "🟢–🟡.",
@@ -385,7 +652,7 @@
                             {
                                 title: "Phang Nga Bay and James Bond Island",
                                 image: "https://thailandmagazine.com/wp-content/uploads/2025/03/H-James-Bond-Island-Tour-Thailand-C-adb-merydolla.webp",
-                                description: "Explore dramatic limestone cliffs, islands, caves and sheltered lagoons by boat. Depending on the tour, you may also visit James Bond Island, Koh Panyee and sea-canoeing sites. This is my preferred Phuket boat excursion because it offers scenery different from Krabi. (<a href='https://kohtourphuket.com/phang-nga-bay?utm_source=chatgpt.com' target='_blank' class='data-link'>Tour information</a>).",
+                                description: "<p>Explore dramatic limestone cliffs, islands, caves and sheltered lagoons by boat. Depending on the tour, you may also visit James Bond Island, Koh Panyee and sea-canoeing sites. This is my preferred Phuket boat excursion because it offers scenery different from Krabi. (<a href='https://kohtourphuket.com/phang-nga-bay?utm_source=chatgpt.com' target='_blank' class='data-link'>Tour information</a>).</p>",
                                 time: "8–10 hours.",
                                 transport: "Tour pickup from the hotel, followed by a boat from the departure pier.",
                                 weather: "🔴 High.",
@@ -395,7 +662,7 @@
                             {
                                 title: "Phi Phi Islands and Maya Bay",
                                 image: "https://res.klook.com/image/upload/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/u6p8y4jy5dosfwhyhnve.jpg",
-                                description: "A classic island excursion with turquoise water, limestone cliffs, beaches and possible snorkeling stops.",
+                                description: "<p>A classic island excursion with turquoise water, limestone cliffs, beaches and possible snorkeling stops.</p>",
                                 time: "8–10 hours.",
                                 transport: "Hotel transfer to a departure pier, then speedboat.",
                                 weather: "🔴 Very high.",
@@ -411,7 +678,7 @@
                             {
                                 title: "Khao Phra Thaeo National Park and Bang Pae Waterfall",
                                 image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/97/85/94/ton-sai-waterfall.jpg?w=1200&h=-1&s=1",
-                                description: "A rainforest walk to a waterfall in one of Phuket's remaining forest areas. October rain can make the scenery particularly lush.",
+                                description: "<p>A rainforest walk to a waterfall in one of Phuket's remaining forest areas. October rain can make the scenery particularly lush.</p>",
                                 time: "2–3 hours at the park.",
                                 transport: "Taxi or private driver, approximately 45–60 minutes.",
                                 weather: "🟡. Light rain may be fine; heavy rain can make paths slippery.",
@@ -421,7 +688,7 @@
                             {
                                 title: "Kathu Waterfall",
                                 image: "https://content.phuket101.net/wp-content/uploads/20200802211411/kathu-waterfall-1.jpg",
-                                description: "A shorter rainforest outing featuring cascades and steps through a green hillside.",
+                                description: "<p>A shorter rainforest outing featuring cascades and steps through a green hillside.</p>",
                                 time: "1–2 hours.",
                                 transport: "Taxi, approximately 20–30 minutes.",
                                 weather: "🟡.",
@@ -431,7 +698,7 @@
                             {
                                 title: "Karon Viewpoint",
                                 image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/6c/9b/93/phuket-city-tour-tour.jpg?w=1200&h=-1&s=1",
-                                description: "A scenic stop overlooking several of Phuket's southern bays. This is a viewpoint rather than a strenuous hike.",
+                                description: "<p>A scenic stop overlooking several of Phuket's southern bays. This is a viewpoint rather than a strenuous hike.</p>",
                                 time: "20–40 minutes.",
                                 transport: "Taxi or private driver.",
                                 weather: "🟡; cloud may obscure the views.",
@@ -447,7 +714,7 @@
                             {
                                 title: "Phuket Elephant Sanctuary",
                                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa4sm06TMUE2rXxgVTOBaK1ANINfMrudD94rtC7itu4tu9zllX-eNkpWA&s=10",
-                                description: "Observe rescued elephants roaming, foraging and bathing freely, learn about their care, and visit the elephant hospital and canopy walkway. The official half-day programme lasts 3.5 hours and offers shared hotel transfers if selected. (<a href='https://www.phuketelephantsanctuary.org/programs/half-day/?utm_source=chatgpt.com' target='_blank' class='data-link'>Official half-day programme</a>).",
+                                description: "<p>Observe rescued elephants roaming, foraging and bathing freely, learn about their care, and visit the elephant hospital and canopy walkway. The official half-day programme lasts 3.5 hours and offers shared hotel transfers if selected. (<a href='https://www.phuketelephantsanctuary.org/programs/half-day/?utm_source=chatgpt.com' target='_blank' class='data-link'>Official half-day programme</a>).</p>",
                                 time: "3.5 hours, plus transfers.",
                                 transport: "Book the sanctuary programme with hotel pickup, or arrange your own transport.",
                                 weather: "🟢–🟡; ordinary showers may be manageable, but heavy rain may affect outdoor activities.",
@@ -457,7 +724,7 @@
                             {
                                 title: "Sati Spa at the InterContinental",
                                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6shfQJnPNX04g_MbnbrX9e4EGLKh0FrbLfDFKcqU2ZZ9iRVTQ2MtVknjO&s=10",
-                                description: "A couples' massage or wellness treatment at your hotel.",
+                                description: "<p>A couples' massage or wellness treatment at your hotel.</p>",
                                 time: "1–2.5 hours.",
                                 transport: "Walk within the resort.",
                                 weather: "🟢.",
@@ -473,7 +740,7 @@
                             {
                                 title: "Phuket Old Town",
                                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt3zD9a7gPjIRVdIiDGJWyHtZ-VHCaOzEfy8pNq637VDFjBhW0DV_1Gdps&s=10",
-                                description: "Explore colorful Sino-Portuguese shophouses, shrines, cafés, small museums and local eateries.",
+                                description: "<p>Explore colorful Sino-Portuguese shophouses, shrines, cafés, small museums and local eateries.</p>",
                                 time: "3–4 hours.",
                                 transport: "Taxi or private driver, approximately 35–50 minutes.",
                                 weather: "🟢–🟡.",
@@ -483,7 +750,7 @@
                             {
                                 title: "Wat Chalong",
                                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkJMKmgQx3Q0qcCLAhSJmrA7UBNb3nNppbGbJO80JDTvL8BmymHeTt4hRb&s=10",
-                                description: "Phuket's best-known temple, with ornate architecture and golden details. Cover your shoulders and knees.",
+                                description: "<p>Phuket's best-known temple, with ornate architecture and golden details. Cover your shoulders and knees.</p>",
                                 time: "45–75 minutes.",
                                 transport: "Taxi or private driver, approximately 30–40 minutes.",
                                 weather: "🟢.",
@@ -493,7 +760,7 @@
                             {
                                 title: "Big Buddha",
                                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsTOdAluxwT4M5LYu_3Tq6rukZunoo_Ay1WMTmbC7nMDmPhk-Z1Owodn6o&s=10",
-                                description: "Phuket's famous hilltop Buddha statue and panoramic viewpoint.",
+                                description: "<p>Phuket's famous hilltop Buddha statue and panoramic viewpoint.</p>",
                                 time: "45–90 minutes if access permits.",
                                 transport: "Taxi or private driver, roughly 35–50 minutes.",
                                 weather: "🟡.",
@@ -503,7 +770,7 @@
                             {
                                 title: "Promthep Cape sunset",
                                 image: "https://content.phuket101.net/wp-content/uploads/20210708210031/promthep-cape.jpg",
-                                description: "One of Phuket's best-known sunset viewpoints, with wide views over the Andaman Sea.",
+                                description: "<p>One of Phuket's best-known sunset viewpoints, with wide views over the Andaman Sea.</p>",
                                 time: "45–90 minutes.",
                                 transport: "Taxi or private driver, approximately 50–70 minutes.",
                                 weather: "🟡.",
@@ -519,7 +786,7 @@
                             {
                                 title: "Naka Weekend Night Market",
                                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvc513CvrDJvN5WZZ8S1wNQC6L6dcbYj50B5yt_5x-z_TKaEaFv-GkTYQ&s=10",
-                                description: "A lively market with Thai street food, snacks, clothes, souvenirs and entertainment.",
+                                description: "<p>A lively market with Thai street food, snacks, clothes, souvenirs and entertainment.</p>",
                                 time: "2–3 hours.",
                                 transport: "Taxi or private driver, approximately 35–50 minutes.",
                                 weather: "🟢–🟡.",
@@ -529,7 +796,7 @@
                             {
                                 title: "Thai cooking class",
                                 image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/04/33/f5/caption.jpg?w=500&h=400&s=1",
-                                description: "A hands-on introduction to Thai cuisine, often including curry paste, stir-fries and a meal at the end.",
+                                description: "<p>A hands-on introduction to Thai cuisine, often including curry paste, stir-fries and a meal at the end.</p>",
                                 time: "3–4 hours.",
                                 transport: "Book a class with hotel pickup or take a taxi to the class location.",
                                 weather: "🟢.",
@@ -539,7 +806,7 @@
                             {
                                 title: "Patong evening",
                                 image: "https://www.deevanahotels.com/wp-content/uploads/2025/03/nightlife-in-Patong-Beach-area-Phuket-.jpg",
-                                description: "A busier tourist town for shopping, restaurants and nightlife, with a different atmosphere from quieter Kamala.",
+                                description: "<p>A busier tourist town for shopping, restaurants and nightlife, with a different atmosphere from quieter Kamala.</p>",
                                 time: "2–4 hours.",
                                 transport: "Taxi, approximately 20–30 minutes.",
                                 weather: "🟢–🟡.",
@@ -552,22 +819,38 @@
             }
         };
 
-        let currentLocation = 'krabi';
+        let currentLocation = 'itinerary';
 
         function renderApp() {
             const container = document.getElementById('app-container');
             const data = itineraryData[currentLocation];
-            const themeBtnColor = data.themeColor === 'teal' ? 'bg-teal-600' : 'bg-blue-600';
             
-            // Update Toggle Buttons
-            document.getElementById('btn-krabi').className = `flex-1 sm:w-32 py-2 px-4 rounded-lg font-medium text-sm transition-all duration-200 ${currentLocation === 'krabi' ? 'bg-teal-600 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-200'}`;
-            document.getElementById('btn-phuket').className = `flex-1 sm:w-32 py-2 px-4 rounded-lg font-medium text-sm transition-all duration-200 ${currentLocation === 'phuket' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-200'}`;
+            // Determine active button color
+            let activeClass = 'bg-indigo-600 text-white shadow-sm';
+            if(data.themeColor === 'teal') activeClass = 'bg-teal-600 text-white shadow-sm';
+            if(data.themeColor === 'blue') activeClass = 'bg-blue-600 text-white shadow-sm';
+
+            // Reset buttons
+            const defaultBtnClass = 'flex-1 sm:flex-none py-2 px-4 rounded-lg font-medium text-sm transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-200';
+            document.getElementById('btn-itinerary').className = `sm:w-36 ${defaultBtnClass}`;
+            document.getElementById('btn-krabi').className = `sm:w-28 ${defaultBtnClass}`;
+            document.getElementById('btn-phuket').className = `sm:w-28 ${defaultBtnClass}`;
+
+            // Set active button
+            if(currentLocation === 'itinerary') document.getElementById('btn-itinerary').className = `flex-1 sm:flex-none sm:w-36 py-2 px-4 rounded-lg font-medium text-sm transition-all duration-200 ${activeClass}`;
+            if(currentLocation === 'krabi') document.getElementById('btn-krabi').className = `flex-1 sm:flex-none sm:w-28 py-2 px-4 rounded-lg font-medium text-sm transition-all duration-200 ${activeClass}`;
+            if(currentLocation === 'phuket') document.getElementById('btn-phuket').className = `flex-1 sm:flex-none sm:w-28 py-2 px-4 rounded-lg font-medium text-sm transition-all duration-200 ${activeClass}`;
+
+            // Accent color for border
+            let accentBorderClass = 'border-indigo-500';
+            if(data.themeColor === 'teal') accentBorderClass = 'border-teal-500';
+            if(data.themeColor === 'blue') accentBorderClass = 'border-blue-500';
 
             // Build HTML
             let html = `
                 <section class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 mb-8">
                     <div class="flex items-center gap-3 mb-4">
-                        <h2 class="text-3xl font-bold text-slate-800">${data.title} Overview</h2>
+                        <h2 class="text-3xl font-bold text-slate-800">${data.title}</h2>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-600 text-base leading-relaxed">
                         <div class="space-y-4">
@@ -589,12 +872,15 @@
                     </div>
                 </section>
                 
-                <h3 class="text-2xl font-bold text-slate-800 mb-6 pl-3 border-l-4 ${data.themeColor === 'teal' ? 'border-teal-500' : 'border-blue-500'}">Activities & Excursions</h3>
+                <h3 class="text-2xl font-bold text-slate-800 mb-6 pl-3 border-l-4 ${accentBorderClass}">${currentLocation === 'itinerary' ? 'Day-by-Day Guide' : 'Activities & Excursions'}</h3>
                 <div class="space-y-5">
             `;
 
             data.categories.forEach((cat, index) => {
                 let catId = `cat-${index}`;
+                // Keep the first tab open by default
+                let isOpen = index === 0 ? 'is-open' : '';
+                
                 html += `
                     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
                         <button onclick="toggleCategory('${catId}')" class="w-full px-6 py-5 flex justify-between items-center bg-white hover:bg-slate-50 transition-colors focus:outline-none text-left">
@@ -604,34 +890,49 @@
                             <svg class="w-6 h-6 text-slate-400 icon-transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         
-                        <div id="${catId}" class="accordion-content ${index === 0 ? 'is-open' : ''}">
+                        <div id="${catId}" class="accordion-content ${isOpen}">
                             <div class="accordion-inner bg-slate-50 border-t border-slate-100">
-                                <div class="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="p-4 sm:p-6 grid grid-cols-1 ${currentLocation === 'itinerary' ? 'lg:grid-cols-2' : 'md:grid-cols-2'} gap-6">
                 `;
 
                 cat.activities.forEach((act) => {
+                    // Conditionally render image if it exists
+                    let imageHtml = act.image ? `
+                        <div class="${currentLocation === 'itinerary' ? 'h-48 sm:h-64' : 'h-56'} overflow-hidden relative border-b border-slate-100 shrink-0">
+                            <img src="${act.image}" alt="${act.title}" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy">
+                        </div>
+                    ` : '';
+
+                    // Conditionally render structured details (Time, Transport, Weather, Combine) if any exist
+                    let detailsHtml = '';
+                    if (act.time || act.transport || act.weather || act.combine) {
+                        detailsHtml += `<div class="grid grid-cols-1 gap-3 bg-slate-50 p-4 rounded-lg border border-slate-100 mt-4 text-sm">`;
+                        if (act.time) detailsHtml += `<p><strong>Time:</strong> ${act.time}</p>`;
+                        if (act.transport) detailsHtml += `<p><strong>Getting there / Transport:</strong> ${act.transport}</p>`;
+                        if (act.weather) detailsHtml += `<p><strong>Weather sensitivity:</strong> ${act.weather}</p>`;
+                        if (act.combine) detailsHtml += `<p><strong>Combine with:</strong> ${act.combine}</p>`;
+                        detailsHtml += `</div>`;
+                    }
+
+                    // Conditionally render structured Booking section if it exists
+                    let bookingHtml = act.booking ? `
+                        <div class="bg-amber-50 p-4 rounded-lg border border-amber-100 text-amber-900 mt-4 text-sm">
+                            <strong>Booking lead time:</strong> ${act.booking}
+                        </div>
+                    ` : '';
+
                     html += `
                         <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
-                            <div class="h-56 overflow-hidden relative border-b border-slate-100">
-                                <img src="${act.image}" alt="${act.title}" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" onerror="this.src='https://placehold.co/800x600/e2e8f0/64748b?text=Image+Unavailable'">
-                            </div>
+                            ${imageHtml}
                             <div class="p-6 flex-1 flex flex-col text-slate-700">
-                                <h5 class="text-xl font-bold text-slate-800 mb-3">${act.title}</h5>
+                                <h5 class="text-xl font-bold text-slate-800 mb-3 pb-2 border-b border-slate-100">${act.title}</h5>
                                 
-                                <div class="space-y-4 text-sm leading-relaxed">
-                                    <p><strong class="text-slate-900 block mb-1">Description:</strong> ${act.description}</p>
-                                    
-                                    <div class="grid grid-cols-1 gap-3 bg-slate-50 p-4 rounded-lg border border-slate-100">
-                                        <p><strong>Time:</strong> ${act.time}</p>
-                                        <p><strong>Getting there / Transport:</strong> ${act.transport}</p>
-                                        <p><strong>Weather sensitivity:</strong> ${act.weather}</p>
-                                        <p><strong>Combine with:</strong> ${act.combine}</p>
-                                    </div>
-
-                                    <div class="bg-amber-50 p-4 rounded-lg border border-amber-100 text-amber-900">
-                                        <strong>Booking lead time:</strong> ${act.booking}
-                                    </div>
+                                <div class="text-[15px] leading-relaxed flex-1">
+                                    ${act.description}
                                 </div>
+                                
+                                ${detailsHtml}
+                                ${bookingHtml}
                             </div>
                         </div>
                     `;
@@ -654,7 +955,7 @@
             currentLocation = location;
             
             const container = document.getElementById('app-container');
-            container.style.opacity = '0.4';
+            container.style.opacity = '0.3';
             
             setTimeout(() => {
                 renderApp();
